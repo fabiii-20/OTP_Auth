@@ -6,7 +6,14 @@ require('dotenv').config();
 
 const app = express();
 
-app.use(cors());
+const corsOptions = {
+  origin: 'http://localhost:5173/', // Replace with your frontend URL
+  methods: 'GET,POST',
+  allowedHeaders: 'Content-Type',
+};
+
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 mongoose.connect(process.env.MONGO_URI, {
