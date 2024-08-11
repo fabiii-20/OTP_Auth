@@ -39,6 +39,7 @@ function OTPForm({ email }) {
           Verify OTP
         </button>
       </form>
+      <p className='text-green-400'> OTP Successfully send to the mail id </p>
     </div>
   );
 }
